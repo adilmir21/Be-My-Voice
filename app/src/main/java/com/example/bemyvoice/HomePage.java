@@ -29,7 +29,9 @@ public class HomePage extends AppCompatActivity {
         });
         signToText.setOnClickListener(v->
         {
-            Toast.makeText(this, "This feature is not Available for now!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(),SignToText.class);
+            startActivity(intent);
+            //Toast.makeText(this, "This feature is not Available for now!", Toast.LENGTH_SHORT).show();
         });
     }
     private void getReadPermission(){

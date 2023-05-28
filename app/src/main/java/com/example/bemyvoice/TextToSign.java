@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -16,26 +17,29 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.chaquo.python.PyObject;
 import com.chaquo.python.Python;
 import com.chaquo.python.android.AndroidPlatform;
+
+import java.util.Locale;
 
 public class TextToSign extends AppCompatActivity {
 
     Button getVideo;
     EditText text;
     VideoView video;
-    TextView wait;
-    ProgressBar progressBar;
+    LottieAnimationView animationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_text_to_sign);
         text = findViewById(R.id.editText);
         video = findViewById(R.id.videoView);
-        wait = findViewById(R.id.wait);
-        progressBar = findViewById(R.id.progressBar);
-        //video.setVisibility(View.VISIBLE);
+        animationView = findViewById(R.id.loading);
+
+
 
         getVideo = findViewById(R.id.button);
         if(!Python.isStarted())
@@ -44,9 +48,11 @@ public class TextToSign extends AppCompatActivity {
         }
         getVideo.setOnClickListener(v->
         {
-            wait.setVisibility(View.VISIBLE);
-            progressBar.setVisibility(View.VISIBLE);
-            Log.d("moja", "hnnu");
+            animationView.setVisibility(View.VISIBLE);
+            if(video.getVisibility()==View.VISIBLE)
+            {
+                video.setVisibility(View.GONE);
+            }
             new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -65,6 +71,7 @@ public class TextToSign extends AppCompatActivity {
 //                            video.setVideoURI(uri);
 //                            video.start();
                                 video.setVisibility(View.VISIBLE);
+                                animationView.setVisibility(View.GONE);
                                 MediaController mediaController = new MediaController(TextToSign.this);
                                 mediaController.setAnchorView(video);
                                 video.setMediaController(mediaController);
