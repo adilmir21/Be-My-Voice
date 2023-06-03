@@ -12,4 +12,9 @@
     <string name="aboutUs">About Us</string>
     <string name="connect">Be My Voice</string>
     <string name="PSL">PSL</string>
+    <string name="homePage">Home</string>
+    <string name="aboutPSLHistory">What is PSL?</string>
+    <string name="aboutPSL">The native language of Pakistan’s Deaf community is Pakistan Sign Language (PSL). Similar to spoken languages, PSL has a variety of dialects in different regions of the country. While many common words are shared, some will be regional-specific. Deaf educators and leaders nationwide have reviewed our PSL Dictionary, and we will continue to update words and signs in order to fully document PSL usage nationwide.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

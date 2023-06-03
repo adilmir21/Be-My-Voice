@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/off_white"
+    android:theme="@style/Theme.BeMyVoice"
+    android:background="?attr/colorOnPrimary"
     android:layout_height="match_parent"
     tools:context=".TextToSign">
 
@@ -32,7 +33,7 @@
         android:padding="15dp"
         android:text="@string/textToSign"
         android:textAlignment="center"
-        android:textColor="@color/blue"
+        android:textColor="?android:attr/textColor"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

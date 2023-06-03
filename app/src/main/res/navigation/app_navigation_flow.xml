@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation_flow"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/aboutProject"
+        android:name="com.example.bemyvoice.NavigationFragments.AboutProject"
+        android:label="fragment_about_project"
+        tools:layout="@layout/fragment_about_project" >
+        <action
+            android:id="@+id/action_aboutProject_to_PSL"
+            app:destination="@id/PSL" />
+        <action
+            android:id="@+id/action_aboutProject_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PSL"
+        android:name="com.example.bemyvoice.NavigationFragments.PSL"
+        android:label="fragment_p_s_l"
+        tools:layout="@layout/fragment_p_s_l" >
+        <action
+            android:id="@+id/action_PSL_to_aboutProject"
+            app:destination="@id/aboutProject" />
+        <action
+            android:id="@+id/action_PSL_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.bemyvoice.NavigationFragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_aboutProject"
+            app:destination="@id/aboutProject" />
+        <action
+            android:id="@+id/action_homeFragment_to_PSL"
+            app:destination="@id/PSL" />
+    </fragment>
+</navigation>

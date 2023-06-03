@@ -7,7 +7,10 @@
     android:layout_height="64dp"
     android:layout_gravity="bottom"
     app:cardCornerRadius="35dp"
-    app:cardElevation="8dp">
+    app:cardElevation="8dp"
+    android:theme="@style/Theme.BeMyVoice"
+    app:cardBackgroundColor="?attr/colorOnPrimary"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +22,8 @@
         android:baselineAligned="false"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:weightSum="3">
+        android:weightSum="3"
+        >
 
         <LinearLayout
             android:id="@+id/bottomItem1"
@@ -34,12 +38,12 @@
                 android:id="@+id/ico1"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/about_us"
-                app:tint="@color/light_blue" />
+                android:src="@drawable/ic_home"
+                app:tint="?attr/colorPrimaryVariant" />
 
             <TextView
                 android:id="@+id/title1"
-                android:text="@string/aboutUs"
+                android:text="@string/homePage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -63,8 +67,8 @@
                 android:id="@+id/ico2"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/conect"
-                app:tint="@color/light_blue" />
+                android:src="@drawable/about_us"
+                app:tint="?attr/colorPrimaryVariant" />
 
             <TextView
                 android:id="@+id/title2"
@@ -94,7 +98,7 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/link"
-                app:tint="@color/light_blue" />
+                app:tint="?attr/colorPrimaryVariant" />
 
             <TextView
                 android:id="@+id/title3"

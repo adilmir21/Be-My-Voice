@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
     sourceSets {
         main {
             python.srcDir "src/main/python"
@@ -14,7 +14,7 @@ android {
     defaultConfig {
         applicationId "com.example.bemyvoice"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -33,6 +33,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        buildFeatures {
+            viewBinding true
+            dataBinding true
         }
     }
     compileOptions {
@@ -53,4 +57,5 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.5.3'
     implementation 'androidx.navigation:navigation-ui:2.5.3'
     implementation 'com.daimajia.androidanimations:library:2.4@aar'
+    implementation 'androidx.databinding:databinding-runtime:8.0.2'
 }
