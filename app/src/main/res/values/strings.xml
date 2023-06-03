@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Be My Voice</string>
     <string name="app_description">Pakistan Sign Language Interpreter App</string>
+    <string name="textToSign">Text To Sign</string>
+    <string name="signToText">Sign To Text</string>
+    <string name="EnterTextHere">Enter Text Here</string>
+    <string name="GetVideo">Get Video</string>
+    <string name="confirmExit">Confirm Exit?</string>
+    <string name="exitText">Are you sure you Want to Exit?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="aboutUs">About Us</string>
+    <string name="connect">Be My Voice</string>
+    <string name="PSL">PSL</string>
 </resources>

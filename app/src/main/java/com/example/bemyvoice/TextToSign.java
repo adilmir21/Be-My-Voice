@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -30,6 +31,7 @@ public class TextToSign extends AppCompatActivity {
     EditText text;
     VideoView video;
     LottieAnimationView animationView;
+    ImageView backBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,10 @@ public class TextToSign extends AppCompatActivity {
         text = findViewById(R.id.editText);
         video = findViewById(R.id.videoView);
         animationView = findViewById(R.id.loading);
+        backBtn = findViewById(R.id.backBtn);
+        backBtn.setOnClickListener(v->{
+            onBackPressed();
+        });
 
 
 

@@ -45,12 +45,11 @@ public class SignToText extends AppCompatActivity{
     String paths;
     TextView responseText, urduResponseText;
     String result, english, urdu;
-    //VideoView videoView;
     ArrayList<String> response = new ArrayList<>();
     ArrayList<String> urduResponse = new ArrayList<>();
     int clickedCount = 0;
     TextToSpeech urduText, englishText;
-    ImageView englishVoice, urduVoice;
+    ImageView englishVoice, urduVoice, backBtn;
     ConstraintLayout layout;
     LinearLayout animLayoutLL;
     private Observer observer;
@@ -60,15 +59,19 @@ public class SignToText extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_to_text);
         startRecording = findViewById(R.id.startRecording);
-        //animationView = findViewById(R.id.party);
         responseText = findViewById(R.id.responseText);
         urduResponseText = findViewById(R.id.urduResponseText);
-        //videoView = findViewById(R.id.video);
         stopRecording = findViewById(R.id.stopRecording);
         englishVoice = findViewById(R.id.englishVoice);
         urduVoice = findViewById(R.id.urduVoice);
         layout = findViewById(R.id.hiddenLayout);
         animLayoutLL = findViewById(R.id.animLayoutLL);
+        backBtn = findViewById(R.id.backBtn);
+
+        backBtn.setOnClickListener(v->{
+            onBackPressed();
+        });
+
 
         urduText = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override

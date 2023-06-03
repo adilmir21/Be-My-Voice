@@ -11,4 +11,6 @@
     <color name="light_blue">#8C9EFF</color>
     <color name="red">#B81B1B</color>
     <color name="off_white">#FAF9F6</color>
+    <color name="lightGrey">#4C4C4C</color>
+    <color name="colorControlHighlight">#93AACF</color>
 </resources>
